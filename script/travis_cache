@@ -4,8 +4,9 @@ require 'base64'
 require 'digest'
 require 'openssl'
 require 'shellwords'
+require File.expand_path('../../spec/support/detect_rails_version', __FILE__)
 
-prefix = "ruby_#{RUBY_VERSION}-rails_#{ENV.fetch 'RAILS'}-"
+prefix = "ruby_#{RUBY_VERSION}-rails_#{detect_rails_version}-"
 BUNDLE = prefix + 'bundle'
 APP    = prefix + 'app'
 
