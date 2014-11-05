@@ -2,10 +2,10 @@ source 'https://rubygems.org'
 
 gemspec
 
-require File.expand_path 'spec/support/detect_rails_version', File.dirname(__FILE__)
+#require File.expand_path 'spec/support/detect_rails_version', File.dirname(__FILE__)
 
-rails_version = detect_rails_version
-gem 'rails', rails_version
+#rails_version = detect_rails_version
+gem 'rails'#, rails_version
 
 # Optional dependencies
 gem 'cancan'
@@ -16,6 +16,8 @@ gem 'pundit'
 # Utility gems used in both development & test environments
 gem 'rake', require: false
 gem 'parallel_tests'
+
+gem 'appraisal'
 
 group :development do
   # Debugging
